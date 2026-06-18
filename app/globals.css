@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff8ea;
+  --foreground: #15180c;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-clinic-canvas: #fff8ea;
+  --color-clinic-paper: #ffffff;
+  --color-clinic-ink: #15180c;
+  --color-clinic-muted: #777763;
+  --color-clinic-olive: #30381f;
+  --color-clinic-olive-soft: #a4aa98;
+  --color-clinic-acid: #f3ff68;
+  --color-clinic-orange: #ff6b2c;
+  --color-clinic-sky: #86c8d8;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
